@@ -24,22 +24,25 @@
     var keys = [];
 
     function keysPressed(e) {
-        keys[e.keyCode] = true;
+        let focusElement = document.activeElement;
+        if (document.querySelector('.fr-element') != focusElement) {
+            keys[e.keyCode] = true;
 
-        // Ctrl + Shift + X
-        if (keys[17] && keys[16] && keys[88]) {
-            let key = document.querySelector('#article-neighbor-list .subject').getAttribute('href');
-            let link = 'https://tgd.kr' + key;
-            location.assign(link);
-            e.preventDefault();
-        }
+            // Ctrl + Shift + X
+            if (keys[17] && keys[16] && keys[88]) {
+                let key = document.querySelector('#article-neighbor-list .subject').getAttribute('href');
+                let link = 'https://tgd.kr' + key;
+                location.assign(link);
+                e.preventDefault();
+            }
 
-        // Ctrl + Shift + C
-        if (keys[17] && keys[16] && keys[67]) {
-            let key = document.querySelectorAll('#article-neighbor-list .subject')[1].getAttribute('href');
-            let link = 'https://tgd.kr' + key;
-            location.assign(link);
-            e.preventDefault();
+            // Ctrl + Shift + C
+            if (keys[17] && keys[16] && keys[67]) {
+                let key = document.querySelectorAll('#article-neighbor-list .subject')[1].getAttribute('href');
+                let link = 'https://tgd.kr' + key;
+                location.assign(link);
+                e.preventDefault();
+            }
         }
 
     }
