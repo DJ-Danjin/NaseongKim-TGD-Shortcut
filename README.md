@@ -27,7 +27,7 @@
    - [Tampermonkey for Opera/OperaGX](https://addons.opera.com/en-gb/extensions/details/tampermonkey-beta/)
 <br/><br/>
 2. **스크립트 설치** : 
-   [클릭하여 설치](NaseongKimTgdShortcut.user.js?raw=True).
+   <a href='NaseongKimTgdShortcut.user.js?raw=True' target='_blank'>클릭하여 설치</a>
 <br/><br/>
 3. **스크립트 활성화** : 
    Tampermonkey 대시보드의 스크립트 이름 옆에 있는 스위치를 클릭하여 스크립트를 활성화합니다.
