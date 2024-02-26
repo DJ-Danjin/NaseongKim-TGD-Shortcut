@@ -15,40 +15,49 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    window.addEventListener("keydown", keysPressed, false);
-    window.addEventListener("keyup", keysReleased, false);
+  window.addEventListener("keydown", keysPressed, false);
+  window.addEventListener("keyup", keysReleased, false);
 
-    var keys = [];
+  var keys = [];
 
-    function keysPressed(e) {
-        let focusElement = document.activeElement;
-        if (document.querySelector('.fr-element') != focusElement) {
-            keys[e.keyCode] = true;
+  function keysPressed(e) {
+    let focusElement = document.activeElement;
+    if (document.querySelector('.fr-element') != focusElement) {
+      keys[e.keyCode] = true;
 
-            // Ctrl + Shift + X
-            if (keys[17] && keys[16] && keys[88]) {
-                let key = document.querySelector('#article-neighbor-list .subject').getAttribute('href');
-                let link = 'https://tgd.kr' + key;
-                location.assign(link);
-                e.preventDefault();
-            }
+      // Ctrl + Shift + X
+      if (keys[17] && keys[16] && keys[88]) {
+        let key = document.querySelector('#article-neighbor-list .subject').getAttribute('href');
+        let link = 'https://tgd.kr' + key;
+        location.assign(link);
+        e.preventDefault();
+      }
 
-            // Ctrl + Shift + C
-            if (keys[17] && keys[16] && keys[67]) {
-                let key = document.querySelectorAll('#article-neighbor-list .subject')[1].getAttribute('href');
-                let link = 'https://tgd.kr' + key;
-                location.assign(link);
-                e.preventDefault();
-            }
-        }
-
+      // Ctrl + Shift + C
+      if (keys[17] && keys[16] && keys[67]) {
+        let key = document.querySelectorAll('#article-neighbor-list .subject')[1].getAttribute('href');
+        let link = 'https://tgd.kr' + key;
+        location.assign(link);
+        e.preventDefault();
+      }
     }
 
-    function keysReleased(e) {
-        keys[e.keyCode] = false;
-    }
+  }
+
+  function keysReleased(e) {
+    keys[e.keyCode] = false;
+  }
+
+  window.onload = function () {
+    let headImg = document.querySelector("header .row > div:nth-child(1) > a").style.backgroundImage;
+    let headFilter = document.querySelector("header .row > div:nth-child(1) > a").style.removeProperty(filter);
+    let backImg = document.querySelector("html, body").style.backgroundImage;
+
+    headImg = "url(https://github.com/DJ-Danjin/NaseongKimTgdShortcut/assets/85267238/25a216e8-bc0b-4339-b536-327f0f9627e8)";
+    backImg = "url(https://github.com/DJ-Danjin/NaseongKimTgdShortcut/assets/85267238/9032b40f-ced5-4476-ab72-c1773dd1e582)";
+  }
 
 })();
