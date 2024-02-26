@@ -3,7 +3,7 @@
 // @name:ko        김나성 트게더 단축키
 // @name:en        NaseongKim TGD Shortcut
 // @namespace    https://github.com/DJ-Danjin/NaseongKimTgdShortcut
-// @version      2024-02-26-2
+// @version      2024-02-26-3
 // @description    다음글 - 컨트롤 + 쉬프트 + X / 이전글 - 컨트롤 + 쉬프트 + C
 // @description:ko 다음글 - 컨트롤 + 쉬프트 + X / 이전글 - 컨트롤 + 쉬프트 + C
 // @description:en Next Post - Ctrl + Shift + X / Prev Post - Ctrl + Shift + C
@@ -53,12 +53,13 @@
   }
 
   window.onload = function () {
-    let headImg = document.querySelector("header .row > div:nth-child(1) > a").style.backgroundImage;
-    let headFilter = document.querySelector("header .row > div:nth-child(1) > a").style.removeProperty(filter);
-    let backImg = document.querySelector("html, body").style.backgroundImage;
+    let headImg = document.querySelector("header .row > div:nth-child(1) > a");
+    let headFilter = document.querySelector("header .row > div:nth-child(1) > a");
+    let backImg = document.querySelector("html, body");
 
-    headImg = "url(https://github.com/DJ-Danjin/NaseongKimTgdShortcut/assets/85267238/25a216e8-bc0b-4339-b536-327f0f9627e8)";
-    backImg = "url(https://github.com/DJ-Danjin/NaseongKimTgdShortcut/assets/85267238/9032b40f-ced5-4476-ab72-c1773dd1e582)";
+    headImg.style.content = "url(https://github.com/DJ-Danjin/NaseongKimTgdShortcut/assets/85267238/25a216e8-bc0b-4339-b536-327f0f9627e8)";
+    headFilter.style.filter = "drop-shadow(0 0)";
+    backImg.style.background = "url(https://github.com/DJ-Danjin/NaseongKimTgdShortcut/assets/85267238/9032b40f-ced5-4476-ab72-c1773dd1e582)";
   }
 
 })();
