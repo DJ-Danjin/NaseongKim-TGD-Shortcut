@@ -3,7 +3,7 @@
 // @name:ko        김나성 트게더 단축키
 // @name:en        NaseongKim TGD Shortcut
 // @namespace    https://github.com/DJ-Danjin/NaseongKimTgdShortcut
-// @version      2024-01-29
+// @version      2024-02-26
 // @description    다음글 - 컨트롤 + 쉬프트 + X / 이전글 - 컨트롤 + 쉬프트 + C
 // @description:ko 다음글 - 컨트롤 + 쉬프트 + X / 이전글 - 컨트롤 + 쉬프트 + C
 // @description:en Next Post - Ctrl + Shift + X / Prev Post - Ctrl + Shift + C
